@@ -1,0 +1,56 @@
+:root {
+    --color-primary: blue;
+    --color-secondary: ;
+    --color-white: #FFF;
+    --color-text-primary: ;
+    --color-text-secondary: ; 
+    --color-line-border: ;
+    --color-button-primary: ; 
+    --color-button-secondary: ;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--color-primary)
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: var(--color-white);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container {
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 2rem 2rem;
+}
+
+header ul li a {
+    font-size: 1rem;
+    text-decoration: none;
+}
