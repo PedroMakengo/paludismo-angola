@@ -2,7 +2,7 @@
 const express = require("express")
 const app = express()
 
-
+// Usando os arquivos estáticos que encontram-se dentro da pasta public
 app.use(express.static("public"))
 
 // Inicializando o nunjucks 
@@ -12,18 +12,26 @@ nunjucks.configure("src/views", {
     noCache: true
 })
 
-// Criando as minhas rotas 
-app.get("/", function(req, res) {
-    return res.render("index.html")  
-})
+// Minhas rotas
+function route(){
+    // Criando as minhas rotas 
+    app.get("/", function(req, res) {
+        return res.render("index.html")  
+    })
 
-app.get("/login", function(req, res) {
-    return res.send("Login")  
-})
+    app.get("/malaria", function(req, res) {
+        return res.render("malaria.html")  
+    })
 
+    app.get("/mort", function(req, res) {
+        return res.render("mort.html")
+    })
 
+    app.get("/regist", function(req, res) {
+        return res.render("register.html")
+    })
+}
+route()
 
 // Rodando o meu servidor
-app.listen(3000, function(){
-    console.log("Servidor rodando na porta 3000")
-})
+app.listen(3000)
