@@ -61,6 +61,7 @@ header ul li a {
 }
 
 header ul li a.active {
+    font-weight: 400;
     color: var(--color-secondary);
     border-bottom: 2px solid var(--color-secondary);
 }
@@ -109,7 +110,7 @@ main section.container div a {
     text-decoration: none;
     background: var(--color-button-primary);
 
-    border-radius: 50px;
+    border-radius: 4px;
     cursor: pointer;
 
     transition: background 1s;
